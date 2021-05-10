@@ -1,0 +1,52 @@
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Testing streaming from IPFS and Dfinity</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+
+    <audio id="listen-from-ipfs" src="https://storageapi.fleek.co/corest-team-bucket/source.mp3">
+        ERROR
+    </audio>
+
+    <audio id="listen-from-dfinity" src="source.mp3">
+        ERROR
+    </audio>
+    
+
+    <div>
+        <a href="#" id="control-ipfs">
+        <p><span class="bg"></span><span class="base"></span><span class="text">Play from IPFS</span></p>
+        </a>
+        <a class="white" href="#" id="control-dfinity">
+        <p><span class="bg"></span><span class="base"></span><span class="text">Play from Dfinity</span></p>
+        </a>
+    </div>
+
+    <script type="text/javascript">
+
+    var hearFromIPFS = document.getElementById('listen-from-ipfs');
+    document.getElementById('control-ipfs').addEventListener("click", function() {
+        if(hearFromIPFS.paused) {
+            hearFromIPFS.play();
+        } else {
+            hearFromIPFS.pause();
+        }
+    })
+
+    var hearFromDfinity = document.getElementById('listen-from-dfinity');
+    document.getElementById('control-dfinity').addEventListener("click", function() {
+        if(hearFromDfinity.paused) {
+            hearFromDfinity.play();
+        } else {
+            hearFromDfinity.pause();
+        }
+    })
+
+    </script>
+
+</body>
+</html>
