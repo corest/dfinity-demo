@@ -1,8 +1,21 @@
 {
-    "canisters": {
-        "othylmann-podcast": {
-            "type": "assets",
-            "source": ["public"]
-        }
+  "canisters": {
+    "othylmann_podcast": {
+      "frontend": {
+        "entrypoint": "public/index.html"
+      },
+      "source": [
+        "public"
+      ],
+      "type": "assets"
     }
+  },
+  "dfx": "0.7.0-beta.8",
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8000",
+      "type": "ephemeral"
+    }
+  },
+  "version": 1
 }
